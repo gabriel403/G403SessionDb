@@ -1,0 +1,27 @@
+{
+    "name": "gabriel403/g403-session-db",
+    "description": "Extension to ZF2 to allow sessions to be stored in the database.",
+    "type": "library",
+    "keywords": [
+        "zf2",
+        "sessions"
+    ],
+    "homepage": "https://github.com/gabriel403/G403SessionDb",
+    "authors": [
+        {
+            "name": "Gabriel Baker",
+            "email": "gabriel@autonomicpilot.co.uk",
+            "homepage": "http://autonomicpilot.co.uk"
+        }
+    ],
+    "license": "BSD-3-Clause",
+    "require": {
+        "php": ">=5.3.3",
+        "zendframework/zendframework": "2.*"
+    },
+    "autoload": {
+        "classmap": [
+            "./Module.php"
+        ]
+    }
+}
