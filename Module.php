@@ -30,7 +30,11 @@ class Module
                 },
                 'session_db_options' => function ($serviceManager) {
                     $config = $serviceManager->get('config');
-                    $sessionDbOptions = new SaveHandler\DbTableGatewayOptions($config['session_table']);
+
+                    $sessionDbOptions = null;
+                    if ( array_key_exists('session_table', $config) && is_array($config['session_table']) ) {
+                        $sessionDbOptions = new SaveHandler\DbTableGatewayOptions($config['session_table']);
+                    }
 
                     return $sessionDbOptions;
                 },
@@ -43,8 +47,12 @@ class Module
                 },
                 'session_options' => function ($serviceManager) {
                     $config = $serviceManager->get('config');
-                    $sessionConfig = new SessionConfig();
-                    $sessionConfig->setOptions($config['session']);
+
+                    $sessionConfig = null;
+                    if ( array_key_exists('session', $config) && is_array($config['session']) ) {
+                        $sessionConfig = new SessionConfig();
+                        $sessionConfig->setOptions($config['session']);
+                    }
 
                     return $sessionConfig;
                 },
@@ -60,10 +68,10 @@ class Module
         );
     }
 
-    public function getConfig()
-    {
-        return include __DIR__ . '/config/module.config.php';
-    }
+    // public function getConfig()
+    // {
+    //     return include __DIR__ . '/config/module.config.php';
+    // }
 
     public function getAutoloaderConfig()
     {
