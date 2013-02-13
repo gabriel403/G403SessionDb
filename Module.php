@@ -1,5 +1,5 @@
 <?php
-namespace G403Session;
+namespace G403SessionDb;
 
 use Zend\Session\Config\SessionConfig;
 use Zend\Session\SaveHandler;
