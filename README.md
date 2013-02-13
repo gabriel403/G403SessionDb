@@ -37,6 +37,13 @@ Installation
     ```bash
     $ php composer.phar update
     ```
+OR
+```bash
+$ php composer.phar require gabriel403/g403-session-db
+```
+
+And type `dev-master` when asked for a version to pick.
+
 
 #### Post installation
 
