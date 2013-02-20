@@ -1,6 +1,6 @@
-ZfcUser
+G403SessionDb
 =======
-Version 0.0.1 Created by Evan Coury and the ZF-Commons team
+Version 0.0.1 Created by Gabriel Baker (Gabriel403)
 
 
 Introduction
@@ -11,7 +11,6 @@ Out of the box, G403SessionDb works with Zend\Db. G403SessionDb provides the fou
 sessions into the db for your ZF2 site. It is designed to be very
 simple and easily to extend.
 
-More information and examples are available on the [ZfcUser Wiki](https://github.com/ZF-Commons/ZfcUser/wiki)
 
 Installation
 ------------
