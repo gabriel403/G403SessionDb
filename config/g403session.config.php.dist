@@ -9,6 +9,7 @@ return array(
         'name'              => 'g403dbsession'
     ),
     'session_table' => array(
+        'tableName'         => 'session',
         'idColumn'          => 'id',
         'nameColumn'        => 'name',
         'dataColumn'        => 'data',
