@@ -1,7 +1,7 @@
 <?php
 
 return array(
-    'sessionTableName'      => 'session',
+    'session_table_name'      => 'session',
     'session' => array(
         'remember_me_seconds' => 2419200,
         'use_cookies'       => true,
