@@ -1,6 +1,7 @@
 <?php
 
 return array(
+    'sessionTableName'      => 'session',
     'session' => array(
         'remember_me_seconds' => 2419200,
         'use_cookies'       => true,
@@ -9,7 +10,6 @@ return array(
         'name'              => 'g403dbsession'
     ),
     'session_table' => array(
-        'tableName'         => 'session',
         'idColumn'          => 'id',
         'nameColumn'        => 'name',
         'dataColumn'        => 'data',
