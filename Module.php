@@ -22,8 +22,15 @@ class Module
         return array(
             'factories' => array(
                 'session_table' => function ($serviceManager) {
+                    $config = $serviceManager->get('config');
+
+                    $sessionTableName = null;
+                    if ( array_key_exists('session_table_name', $config)) {
+                        $sessionTableName = $config['session_table_name'];
+                    }
+                    
                     $sessionTableGateway = new TableGateway(
-                        'session', 
+                        $sessionTableName, 
                         $serviceManager->get('Zend\Db\Adapter\Session'));
 
                     return $sessionTableGateway;
