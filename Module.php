@@ -28,9 +28,9 @@ class Module
                     if ( array_key_exists('session_table_name', $config)) {
                         $sessionTableName = $config['session_table_name'];
                     }
-                    
+
                     $sessionTableGateway = new TableGateway(
-                        $sessionTableName, 
+                        $sessionTableName,
                         $serviceManager->get('Zend\Db\Adapter\Session'));
 
                     return $sessionTableGateway;
@@ -47,7 +47,7 @@ class Module
                 },
                 'session_save_handler' => function ($serviceManager) {
                     $saveHandler = new SaveHandler\DbTableGateway(
-                        $serviceManager->get('session_table'), 
+                        $serviceManager->get('session_table'),
                         $serviceManager->get('session_db_options'));
 
                     return $saveHandler;
@@ -65,10 +65,10 @@ class Module
                 },
                 'session_save_manager' => function ($serviceManager) {
                     $sessionManager = new SessionManager(
-                        $serviceManager->get('session_options'), 
-                        null, 
+                        $serviceManager->get('session_options'),
+                        null,
                         $serviceManager->get('session_save_handler'));
-                    
+
                     return $sessionManager;
                 },
             )
