@@ -1,19 +1,19 @@
 <?php
 
 return array(
-    'session_table_name'      => 'session',
-    'session' => array(
+    'session'           => array(
         'remember_me_seconds' => 2419200,
         'use_cookies'       => true,
         'cookie_httponly'   => true,
         'cookie_domain'     => '.domain.com',
         'name'              => 'g403dbsession'
     ),
-    'session_table' => array(
+    'session_table'     => array(
         'idColumn'          => 'id',
         'nameColumn'        => 'name',
         'dataColumn'        => 'data',
         'lifetimeColumn'    => 'lifetime',
         'modifiedColumn'    => 'modified'
     ),
+    'session_table_name'=> 'session',
 );
